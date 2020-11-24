@@ -1,0 +1,110 @@
+.container{
+    width: 100%;
+    margin: 0;
+    margin-left: 23px;
+    overflow-x: hidden;
+
+}
+.login-form{
+   width : 100%;
+   margin-top: 100px;
+   margin:0 auto;
+}
+input[type="text"]{
+    padding: 10px;
+    cursor: pointer;
+}
+input[type="password"]{
+    padding: 10px;
+    cursor: pointer;
+}
+.but{
+    padding: 10px;
+    cursor: pointer;
+}
+@media screen and (min-width : 320px){
+    .container{
+        width: 100%;
+        /* margin: 0px auto; */
+        overflow-x: hidden;
+        /* margin-left: 20px; */
+
+    }
+    .login-form{
+       width : 100%;
+       /* margin-top: 20px; */
+       margin-left: 10px;
+    }
+
+    input[type="text"]{
+        width : 200px;
+        padding:5px;
+        cursor: pointer;
+    }
+    input[type="password"]{
+        width : 200px;
+        padding:5px;
+        cursor: pointer;
+    }
+    .but{
+        width : 200px;
+        padding:5px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width : 768px){
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .login-form{
+       width : 100%;
+       margin-top: 30%;
+       margin-left:40%;
+    }
+    input[type="text"]{
+        padding:5px;
+        cursor: pointer;
+    }
+    input[type="password"]{
+        padding:5px;
+        cursor: pointer;
+    }
+    .but{
+        padding:5px;
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width : 1400px){
+    .container{
+        width: 100%;
+        margin: 0;
+        margin-left: 60px;
+        overflow-x: hidden;
+
+    }
+    .login-form{
+       width : 100%;
+       margin-top: 15%;
+    }
+    input[type="text"]{
+        padding:5px;
+        cursor: pointer;
+    }
+    input[type="password"]{
+        padding:5px;
+        cursor: pointer;
+    }
+    .but{
+        padding:5px;
+        cursor: pointer;
+    }
+}
+
+.mycl{
+    width : 220px;
+    height :200px;
+}

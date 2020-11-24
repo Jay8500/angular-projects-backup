@@ -1,0 +1,64 @@
+<header>
+    <h3 class="text-white text-center mt-3">{{contentTitle }}</h3>
+</header>
+<div class="container">
+
+    <form class="login-form" [formGroup]="loginsform" (ngSubmit)="credentials()">
+        <div class="form-group">
+            <input type="text" autocomplete="true" class="form-control form-control-sm" name="name"
+                formControlName="logname" placeholder="Enter Name" (blur)="getError('logname')" />
+            <div class="text-white">
+                {{ errorMessages.loginForm}}
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control form-control-sm" name="password" formControlName="logpssd"
+                placeholder="Enter Password" (blur)="getError('logpssd')" />
+            <div class="text-white">
+                {{ errorMessages.loginPassword}}
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control form-control-sm" name="password" formControlName="logCpssd"
+                placeholder="Conform Password" (blur)="getError('logCpssd')" />
+            <div class="text-white">
+                {{ errorMessages.loginCpassword}}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mt-2 but">Login</button>
+        <p class="text-white mt-2" style="cursor: pointer;">Didnt have Account? Signup</p>
+    </form>
+    <div class="border border-white mycl" *ngIf="blocked">
+        <span>
+            <h4 class="text-center text-white">
+                <i class="fa fa-check-square text-white" *ngIf="!showticksmin"></i>
+                <i class="fa fa-exclamation" *ngIf="showticksmin"></i> MinLength {{mimLen}}</h4>
+        </span>
+        <span>
+            <h4 class="text-center text-white">
+                <i class="fa fa-check-square text-white" *ngIf="!showticksuppr"></i>
+                <i class="fa fa-exclamation" *ngIf="showticksuppr"></i> UpperCase {{uppercase}}</h4>
+        </span>
+        <span>
+            <h4 class="text-center text-white">
+                <i class="fa fa-check-square text-white" *ngIf="!showtickslwr"></i>
+                <i class="fa fa-exclamation" *ngIf="showtickslwr"></i> Lower Case {{lowercase}}</h4>
+        </span>
+        <span>
+            <h4 class="text-center text-white">
+                <i class="fa fa-check-square text-white" *ngIf="!showtickschrc"></i>
+                <i class="fa fa-exclamation" *ngIf="showtickschrc"></i> Spcl Chrctrs {{specialcharacter}}</h4>
+        </span>
+        <span>
+            <h4 class="text-center text-white">
+                <i class="fa fa-check-square text-white" *ngIf="!showticksnum"></i>
+                <i class="fa fa-exclamation" *ngIf="showticksnum"></i> Number {{number}}</h4>
+        </span>
+    </div>
+    <div class="class">
+        <select (blur)="getError('wow')" [(ngModel)]="wow" [disabled]="false">
+            <option value="{{l.value }}"  *ngFor="let l of list;">{{l.label }}</option>
+        </select>  <span class="text-white">{{errorMessages.wow}}</span>
+    </div>
+
+</div>

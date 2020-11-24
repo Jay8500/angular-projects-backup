@@ -1,0 +1,21 @@
+{
+    "heroesUrl": "assets/config.json",
+    "masterApi": [
+        {
+            "id": "1",
+            "name": "jay"
+        },
+        {
+            "id": "2",
+            "name": "jay"
+        },
+        {
+            "id": "3",
+            "name": "jay"
+        },
+        {
+            "id": "4",
+            "name": "jay"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+img{
+   display: block;
+   margin-left: 40%;
+   margin-top:20%;
+   
+}
+
+.pf{
+    margin-left: 40%;
+    margin-top:10px;
+}
+
+@media screen and (max-width : 1440px) and (min-width : 1024px ){
+    .pnf{
+        margin-left:0;
+    }
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    .pf{
+       font-size: x-large;
+       padding-left: 60px;
+    }
+}
+
+@media screen and(min-width : 320px){
+    img{
+        width: 70px;
+        height: 70px;
+        margin-left: 51px;
+        margin-top: 20px;
+    }
+    .pf{
+        font-size:x-small;
+        padding-left: 60px;
+        display: inline-block;
+     }
+
+}

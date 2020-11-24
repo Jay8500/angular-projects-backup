@@ -1,0 +1,22 @@
+<div class="container">
+
+    <form>
+        <div class="form-group">
+            <label for="name">
+                <input type="text" id="name" name="text" [(ngModel)]="l.n" class="form-control form-control-sm"
+                    placeholder="enter name here" required>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="password">
+                <input type="password" id="password" name="password" [(ngModel)]="l.p" class="form-control form-control-sm"
+                    placeholder="enter password here" required>
+            </label></div>
+
+        <div class="form-group">
+            <button class="btn btn-primary pd-0" (click)="logins()">submit</button>
+        </div>
+    </form>
+    <p> Not a User <button type="button" class="btn btn-primary" (click)="nav()">SignUp</button></p>
+    <router-outlet></router-outlet>
+</div>

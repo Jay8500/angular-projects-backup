@@ -1,0 +1,26 @@
+<ng-content></ng-content>
+
+
+<div class="input-group mb-3">
+    <input type="text" [(ngModel)]="tit.titles">
+    <div class="input-group-append">
+        <span><button (click)="post()">post ra</button></span>
+    </div>
+</div>
+
+<table class="table">
+    <thead class="table table-striped">
+        <tr>
+            <th>Todo</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of backendData; index as i">
+            <td> {{ m.titles}}</td>
+            <td><button (click)="del(m._id)" class="btn btn-danger">delete</button></td>
+            <td><button (click)="edit(i)" class="btn btn-danger">Edit</button></td>
+        </tr>
+    </tbody>
+</table>

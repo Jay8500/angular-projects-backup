@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <table class="table table-border" style="margin-left: 300px; margin-top:100px;">
+                <tr>
+                    <th>Sequence</th>
+                    <th>Playists</th>
+                    <th>Pages</th>
+                </tr>
+                <tr *ngFor="let bDisply of backendData;
+              let i = index">
+                    <td>{{bDisply.id}}</td>
+                    <td>{{bDisply.uDsplyNme}} </td>
+                    <td><button class="btn btn-primary" (click)="playists(bDisply)">Pluggin Playists</button> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <input type="text" [(ngModel)]="firstname" name="name" (blur)="geterror('firstname')" />
+</div> {{errorMsg.firstnameerr[0].wow}}

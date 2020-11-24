@@ -1,0 +1,10 @@
+{
+    "UsersApi": "http://localhost:3000/jay/",
+    "users": {
+        "createUser": "pluggerSet",
+        "getpluggersall": "jay/pluggersget"
+    },
+    "gendersLists" :{
+        "gendersList" : "jay/gendersList"
+    }
+}

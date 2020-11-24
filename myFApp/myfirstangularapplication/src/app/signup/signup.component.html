@@ -1,0 +1,30 @@
+<div class="container">
+
+    <form>
+        <div class="form-group">
+            <label for="name">
+                <input type="text" id="name" [(ngModel)]="signing.name" name="text" class="form-control form-control-sm"
+                    placeholder="enter name here" required>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="password">
+                <input type="password" id="password" [(ngModel)]="signing.passwords" name="password"
+                    class="form-control form-control-sm" placeholder="enter password here" required>
+            </label></div>
+        <div class="form-group">
+            <label for="cnfpassword">
+                <input type="password" id="cnfpassword" [(ngModel)]="signing.confpassword" name="cnfpassword" class="
+                        form-control form-control-sm" placeholder="conform password here">
+            </label>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary pd-0" (click)="submit()">submit</button>
+        </div>
+    </form>
+    <p> Already a User <button type="button" class="btn btn-primary" (click)="nav()">Login</button></p>
+</div>
+
+
+
+<!-- pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" -->

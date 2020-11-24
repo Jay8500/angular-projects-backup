@@ -1,0 +1,52 @@
+<button (click)="getShippingDetails()">Fetch Shipping Details</button>
+
+<!-- {{ shippingdetails | json }} -->
+<div *ngFor="let shipdet of shippingdetails; index as i;">
+    {{ i }} {{ shipdet.type }} {{ shipdet.price }}
+</div>
+
+<div class="container mt-2">
+    <div>
+        <h4 class="bg-primary text-center"> User Name is {{ userName }}</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <app-child></app-child>
+        </div>
+        <div class="col-sm-6">
+            <app-comp2></app-comp2>
+        </div>
+        <div class="col-sm-6">
+            <app-comp3></app-comp3>
+        </div>
+        <div class="col-sm-6">
+            <app-comp4></app-comp4>
+        </div>
+    </div>
+
+    <br><br>
+    <br>
+    <!-- <app-lifecycles></app-lifecycles> -->
+    <div *ngFor="let pro of products;">
+        {{ pro.id}} {{ pro.name}}
+    </div>
+
+    <div>
+        <ul>
+            <li routerLink="product">PRODUCT</li>
+            <li routerLink="productlist">PRODUCT LIST</li>
+        </ul>
+    </div>
+    <!--dynamically added routing-->
+    <router-outlet></router-outlet>  
+
+    <div>
+        <p-calendar [(ngModel)]="values"></p-calendar>
+        {{ values }}
+    </div>
+
+    <div class="bg-success">
+        <credit-card></credit-card>
+    </div>
+</div>
+<finding></finding>

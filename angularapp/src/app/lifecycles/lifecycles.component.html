@@ -1,0 +1,11 @@
+<div>
+    <p>lifecycles works! its a child</p>
+    <!-- <app-comp2></app-comp2> -->
+    <input type="text" #myvals placeholder="input here" />
+    <button (click)="fun(myvals)">submit value</button>
+    <!-- <app-hooks [Myvalue]="values">Uxtrends.</app-hooks> -->
+    <app-hooks *ngIf="hooksComp" [Myvalue]="values">ngContent : {{values }} </app-hooks>
+    <br>
+    <br>
+    <button class="btn btn-danger" (click)="destroy()"> danger</button>
+</div>

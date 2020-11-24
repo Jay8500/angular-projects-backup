@@ -1,0 +1,44 @@
+<div>
+  <h1>hello my world..</h1>
+  <!-- <app-carwheelsfeature></app-carwheelsfeature> -->
+  <br>
+  <button routerLink="/customers">Customers</button>
+  <button routerLink="/orders">Orders</button>
+  <button routerLink="/cars">cars</button>
+  <button routerLink="">Home</button>
+
+  <router-outlet></router-outlet>
+
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="name" /><br>
+
+    <input type="text" formControlName="email" placeholder="email" /><br>
+    <input type="text" formControlName="message" placeholder="message" /><br>
+    <p-calendar formControlName="value"></p-calendar>
+    <button type="submit" [disabled]="myForm.invalid">post it</button>
+    <!-- {{ myForm.value | json}} {{ myForm.status}} -->
+  </form>
+  <br><br>
+  <table>
+    <tr *ngIf="ba">
+      <td>name</td>
+      <td>email</td>
+      <td>messages</td>
+      <td>birthdate</td>
+    </tr>
+    <tr *ngFor="let it of paste; i as index">
+      <td>{{it.name }}</td>
+      <td>{{it.email }}</td>
+      <td>{{it.message }}</td>
+      <td>{{it.value | date }}</td>
+    </tr>
+  </table>
+  <app-help-viewchild fovu="da"></app-help-viewchild>
+  <button type="button" #targetVariable>button</button>
+</div>
+
+
+
+
+<!-- ng generate module orders --route orders --module app.module -->

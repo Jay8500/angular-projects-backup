@@ -1,0 +1,72 @@
+.sup{
+    width : 40px;
+}
+
+.my{
+    width : 40px;
+    height : 30px;
+    /* text-align: center; */
+    font-size: x-small;
+}
+
+input[type = text]{
+
+    border-radius: 5px;
+    width : 200px;
+    height: 40px;
+}
+
+.head{
+
+    width: 54%;
+    height : 20px;
+    padding-left: 14%;
+}
+
+.heads{
+
+    width : 30%;
+    height : -3%;
+}
+
+.contentsize{
+    font-size: x-small;
+}
+
+/* .tableshead{
+
+    padding-left:18%;
+    width : 60%;
+    height : auto;
+} */
+
+/* .todo {
+margin-bottom: 10%;
+} */
+
+.dat{
+
+    margin-left: 2%;
+    float: left;
+}
+
+@media only screen and ( max-width : 686px){
+    .jumbotron container-fluid head {
+        
+        float : left;
+        /* background-color: black; */
+    }
+}
+
+.ele{
+    width: 10px;
+}
+
+.eles{
+    width : 150px;
+}
+
+.tab{
+
+    width : 300px;
+}

@@ -1,0 +1,157 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="btn btn-success">Wonderful Life</h2>
+            <button class="btn btn-success" (click)="getbyall()">get them</button>
+            <br>
+            <div>
+               <table>
+                   <tr>
+                       <th>ds</th>
+                       <th>ds</th>
+                   </tr>
+                   <tr *ngFor="let f of storeit;">
+                       <td>{{ f.name}}</td>
+                       <td>{{ f.gender}}</td>
+                   </tr>
+               </table>
+            </div>
+            <select  [(ngModel)]="selec">
+                <option *ngFor="let f of genderArray" value={{f.value}}>{{f.label}}</option>
+            </select> {{ selec}}
+        </div>
+    <!-- <div class="row">
+        <div class="col-6">
+            <ul style="list-style-type: none;">
+                <li routerLink="playistslist" class="btn btn-primary">Pluggins</li>
+            </ul>
+        </div> 
+     <div class="col-6">
+            <div class="row">
+                <div class="col-6 mt-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="text-center">Plug Up</h2>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div>
+                                    <input type="text" placeholder="name" name="name" [(ngModel)]="plugUp.name" />
+                                </div>
+                                <div>
+                                    <select *ngFor="let d of plugUp.opt">
+                                        <option value={{d.value}}>{{d.label }}</option>
+                                    </select> {{ selec }}
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="email" name="email" [(ngModel)]="plugUp.email" />
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="phone number" name="phonenum"
+                                        [(ngModel)]="plugUp.phoneNum" />
+                                </div>
+                                <div>
+                                    <input type="password" placeholder="password" name="password"
+                                        [(ngModel)]="plugUp.psswd" />
+                                </div>
+                                <div>
+                                    <input type="password" placeholder="confirm password" name="confirm password"
+                                        [(ngModel)]="plugUp.confirmPsswd" />
+                                </div>
+                                <div>
+                                    <button class="btn btn-success">Post</button>
+                                </div>
+                                <p>Already a Plugger ?</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Plug In</h2>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div>
+                                    <span class="prepend"><i class="fa fa-user"></i></span>
+                                    <input type="text" placeholder="name" name="name"/>
+                                </div>
+                                <div>
+                                    <span class="prepend"><i class="fa fa-lock"></i></span>
+                                    <input type="text" placeholder="password" name="password"/>
+                                </div>
+
+                                <div>
+                                    <button class="btn btn-primary">Post</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> -->
+    <div class="col-3">
+        <div>
+            <h2 class="btn btn-primary">Registration</h2>
+        </div>
+        <form [formGroup]="masterForm" (ngSubmit)="post()">
+            <div>
+                <input type="text" formControlName="name" placeholder="name">
+            </div>
+            <div>
+                <input type="text" formControlName="middlename" placeholder="middlename">
+            </div>
+            <div>
+                <input type="text" formControlName="surname" placeholder="surname">
+            </div>
+            <div>
+                <input type="text" formControlName="loginname" placeholder="login name">
+            </div>
+            <div>
+                <input type="text" formControlName="nationality" placeholder="natonality">
+            </div>
+            <div>
+                <input type="text" formControlName="state" placeholder="state">
+            </div>
+            <div>
+                <input type="password" formControlName="password" placeholder="password">
+            </div>
+            <div>
+                <input type="password" formControlName="conformpassword" placeholder="conform pssd">
+            </div>
+            <div>
+                <input type="text" formControlName="gender" placeholder="gender">
+            </div>
+            <div>
+                <input type="text" formControlName="homecontact" placeholder="homecontact">
+            </div>
+            <div>
+                <input type="text" formControlName="personalcontact" placeholder="personalContact">
+            </div>
+            <div>
+                <input type="text" formControlName="states" placeholder="states">
+            </div>
+            <div>
+                <input type="text" formControlName="district" placeholder="district">
+            </div>
+            <div>
+                <input type="text" formControlName="landmark" placeholder="landmark">
+            </div>
+            <div>
+                <input type="text" formControlName="pincode" placeholder="pincode">
+            </div>
+            <div>
+                <input type="text" formControlName="createDate" placeholder="createDate">
+            </div>
+            <div>
+                <input type="text" formControlName="sessionBy" placeholder="sessionBy">
+            </div>
+            <button class="btn btn-primary">get me</button>
+            <p-toast></p-toast>
+        </form>
+    </div>
+    <!-- </div> -->
+</div>
+<router-outlet></router-outlet>
